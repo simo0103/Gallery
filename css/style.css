@@ -1,0 +1,175 @@
+* {
+    list-style-type: none;
+    margin: 0;
+    text-decoration: none;
+    padding: 0;
+    color: black;
+    font-family: 'Rubik', sans-serif,Arial, 'Helvetica Neue', Helvetica, sans-serif
+
+}
+
+body {
+    background: whitesmoke;
+}
+
+.mobile-nav {
+    display: flex;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.menuResp {
+    display: flex;
+    display: none;
+    flex-direction: column;
+}
+
+.menuResp > a {
+    padding: 10px 0;
+    width: 100px;
+    cursor: pointer;
+    border-bottom: 2px solid #E91E63;
+}
+
+.largeScreen-nav {
+    padding: 10px;
+    font-size: 18px;
+    display: none;
+}
+
+.submenu, .icons > a, .mobile-nav > a{
+    padding: 0 10px;
+}
+
+
+div.fa.fa-bars, .menu {
+    flex: 1;
+    color: black;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+.fa.fa-venus-mars, a.fa.fa-angle-down {
+    color: #E91E63;
+    font-weight: bold;
+    
+}
+
+.sortedBy {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    border-bottom: 1.5px solid lightgray;
+    
+}
+
+.sortedBy > p {
+    padding: 0 10px;
+}
+
+figure {
+    padding: 20px 10px;
+    border: 2px solid #E91E63;
+    margin-top: 5%;
+    opacity: 0;
+}
+
+img {
+    width: 230px;
+    height: 330px;
+}
+
+.subFig {
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.subFig > p {
+    color: #696767;
+    padding: 10px 0 0 0;
+}
+.content {
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex-basis: 50%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+}
+/* -------TABLET ------*/
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width: 1024px) 
+and (-webkit-min-device-pixel-ratio: 1) {
+    .largeScreen-nav { 
+        display: flex;
+        font-size: 20px;
+
+    }
+    .mobile-nav {
+        display: none; 
+    }
+
+    .col {
+        flex-basis: 33%;
+    }
+
+    img {
+        width: 220px;
+        height: 320px;
+    }
+}
+
+
+/* -------NOTEBOOK ------*/
+@media screen 
+and (min-device-width: 1024px) 
+
+and (-webkit-min-device-pixel-ratio: 1) { 
+
+    .largeScreen-nav { 
+        display: flex;
+
+    }
+    .mobile-nav {
+        display: none; 
+    }
+
+    .col {
+        flex-basis: 25%;
+    }
+ 
+}
+
+/* -------LARGE SCREEN ------*/
+@media only screen and (min-width: 1224px) {
+    .col {
+        flex-basis: 16%;
+    }
+
+    img {
+        width: 220px;
+        height: 330px;
+    }
+
+    .content {
+        justify-content: space-between;
+    }
+  }
+  
